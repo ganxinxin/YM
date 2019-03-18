@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<cn.cbapay.ympay.view.NoScrollViewPager
+    android:id="@+id/vp_content"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"/>
+    <RadioGroup
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    <RadioButton
+
+        android:id="@+id/home"
+        style="@style/Bottom_Tab_Style"
+        android:drawableTop="@drawable/selector_tag_home"
+        android:text="首页" />
+
+    <RadioButton
+        android:id="@+id/financ"
+        style="@style/Bottom_Tab_Style"
+        android:drawableTop="@drawable/selector_tag_money"
+        android:text="理财" />
+
+    <RadioButton
+        android:id="@+id/find"
+        style="@style/Bottom_Tab_Style"
+        android:drawableTop="@drawable/selector_tag_find"
+        android:text="发现" />
+
+    <RadioButton
+        android:id="@+id/mine"
+        style="@style/Bottom_Tab_Style"
+        android:drawableTop="@drawable/selector_tag_mine"
+        android:text="我的" />
+
+    </RadioGroup>
+</LinearLayout>

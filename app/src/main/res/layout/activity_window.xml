@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null"
+    android:gravity="center">
+    <LinearLayout
+        android:orientation="vertical"
+
+        android:layout_width="280dp"
+        android:layout_height="170dp">
+        <TextView
+            android:background="@drawable/window_corners"
+            android:id="@+id/tv_text"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:textColor="#000000"
+            android:text="手机号已注册，请直接登陆"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+        <Button
+            android:id="@+id/bt_cancle"
+            android:background="@drawable/window_cancle_corners"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:textColor="#E2483C"
+            android:text="取消"/>
+            <Button
+                android:id="@+id/bt_login"
+                android:background="@drawable/window_login_carners"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="登陆"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

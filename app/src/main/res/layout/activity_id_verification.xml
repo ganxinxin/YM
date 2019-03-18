@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.cbapay.ympay.mvp.ui.activity.IdVerificationActivity"
+    android:background="@color/colorGray">
+    <include layout="@layout/toolbar" />
+    <ImageView
+        android:id="@+id/img_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/camera"
+        android:layout_margin="30dp"/>
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="拍摄身份证，完善身份信息"
+        android:layout_marginBottom="30dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLetGray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="姓名"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:background="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:padding="15dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLetGray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="身份证号码"
+            android:textSize="18sp"
+            android:padding="15dp"
+            android:background="@color/colorWhite"/>
+        <TextView
+            android:id="@+id/edt_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:textSize="18sp"
+            android:gravity="end"
+            android:padding="15dp"
+            android:digits="0123456789xyzXYZ"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorLetGray"/>
+    <TextView
+        android:id="@+id/identity_fail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="身份证件审核不通过，请重新上传"
+        android:textColor="@color/colorPrimary"
+        android:gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/btn_film"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_enable"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="立即拍摄"
+        android:textSize="20sp"
+        android:textColor="@color/colorGray"/>
+
+
+
+</LinearLayout>

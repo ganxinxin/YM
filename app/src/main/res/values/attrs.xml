@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MySurfaceView">
+        <attr name="padding" format="integer"/>
+        <!--判断身份证前后  true为正面 false为背面-->
+        <attr name="index0" format="boolean"/>
+        <!--图片距离圆角矩形的边距-->
+        <attr name="bitpadd" format="integer"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar_photo"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@color/colorDark">
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="将身份证正面置于此区域，拍摄身份证"
+                android:textColor="@color/colorWhite"/>
+
+            <SurfaceView
+                android:id="@+id/pictureView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/txt"
+                android:layout_centerVertical="true"
+                android:background="@color/colorAlpha"
+                />
+
+
+            <ImageView
+                android:id="@+id/img_Id_card"
+                android:layout_above="@id/txt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                android:background="@color/colorAlpha"
+                android:src="@mipmap/handhold"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_begin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorBlack"
+            android:padding="10dp"
+            >
+
+            <RelativeLayout
+
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle"
+                >
+
+                <TextView
+                    android:id="@+id/txt_film"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle1"
+                    />
+            </RelativeLayout>
+
+            <ImageButton
+                android:id="@+id/flashlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorBlack"
+                android:src="@mipmap/flash"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/lin_last"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@color/colorBlack"
+            android:gravity="center_vertical"
+            >
+            <Button
+                android:id="@+id/btn_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="重拍"
+                android:textColor="@color/colorTitle"
+                android:background="@color/colorBlack"/>
+            <Button
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="完成"
+                android:textColor="@color/colorTitle"
+                android:background="@color/colorBlack"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.cbapay.ympay"
+    android:versionCode="1"
+    android:versionName="1.0-debug" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="27" />
+
+    <!-- 在SDCard中创建与删除文件权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 开启闪光灯权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <application
+        android:name="cn.cbapay.ympay.app.MyApplication"
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="cn.cbapay.ympay.mvp.ui.activity.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.FrontIdCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/PhotoTheme" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.BackIdCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/PhotoTheme" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.HoldIdCardActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="sensor"
+            android:theme="@style/PhotoTheme" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.IdVerificationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.SubmitAuditActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.SubmitFinishActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 账户信息页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.AccountInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- 职业选择页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.CareerActivity"
+            android:screenOrientation="portrait" />
+        <!-- 邮箱修改页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.EmailActivity"
+            android:screenOrientation="portrait" />
+        <!-- 未实名更换手机号-输入密码页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.InputPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 已实名更换手机号 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait" />
+        <!-- 已实名更换手机号-输入支付密码页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.InputPayPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 已实名更换手机号-输入支付身份证号页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.InputIdentityActivity"
+            android:screenOrientation="portrait" />
+        <!-- 已实名更换手机号-输入账户名页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.InputAccountActivity"
+            android:screenOrientation="portrait" />
+        <!-- 输入手机号页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.InputPhoneActivity"
+            android:screenOrientation="portrait" />
+        <!-- 实名认证首页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.AuthenticationInfoActivity"
+            android:screenOrientation="portrait" />
+        <!-- 输入银行卡号页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.InputCardNumberActivity"
+            android:screenOrientation="portrait" />
+        <!-- 添加信用卡页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.AddCreditCardActivity"
+            android:screenOrientation="portrait" />
+        <!-- 添加借记卡页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.AddDebitCardActivity"
+            android:screenOrientation="portrait" />
+        <!-- 设置支付密码页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.SetPayPasswordActivity"
+            android:screenOrientation="portrait" />
+        <!-- 初级认证完成页面 -->
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.AuthenticationCompleteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.RegisterSendCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ForgetPasswordSencondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ProvinceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.CityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ChangeLoginPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ChangeLoginPasswordSecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ChangePayPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ChangePayPasswordSencondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ChangePayPasswordThridActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cbapay.ympay.mvp.ui.activity.ChangePayPasswordFourActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="h464cy0unIV1OcDbu2m6FGrR3CwuCx60" /> <!-- http://lbsyun.baidu.com/apiconsole/key -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <provider
+            android:name="com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="cn.cbapay.ympay.com.android.tools.ir.server.InstantRunContentProvider"
+            android:multiprocess="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <include layout="@layout/title_bar_layout"></include>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="再次确认密码"
+            android:textSize="16sp" />
+    </RelativeLayout>
+    <com.jungly.gridpasswordview.GridPasswordView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16sp"
+        android:id="@+id/gpv_input_pwd"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:gpvGridColor="#ffffff"
+        app:gpvLineColor="#dcdcdc"
+        app:gpvLineWidth="1dp"
+        app:gpvPasswordLength="6"
+        app:gpvPasswordTransformation="●"
+        app:gpvPasswordType="numberPassword"
+        app:gpvTextColor="#454545"
+        app:gpvTextSize="25sp">
+        <requestFocus />
+    </com.jungly.gridpasswordview.GridPasswordView>
+
+
+</LinearLayout>

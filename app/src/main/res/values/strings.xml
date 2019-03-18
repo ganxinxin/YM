@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">YMPay</string>
+    <string name="email_title">Email</string>
+    <string name="email_ilegal">The email format is not correct, please input after check</string>
+    <string name="verify_code_invalid">Verification code has expired</string>
+    <string name="verify_code_send">The verification code sent to your mailbox, please check to the mailbox</string>
+    <string name="verify_code_send_fail">Verification code sent failed, please check the mailbox is correct</string>
+    <string name="verify_code_wrong">Verification code is wrong</string>
+    <string name="verify_code_get">"VerifyCode"</string>
+    <string name="phone_ilegal">The phone format is not correct, please input after check</string>
+    <string name="verify_code_send_phone">The verification code sent to your phone, please check to the phone</string>
+    <string name="pay_pwd_wrong_tip">Payment password input error for 5 times, please find the payment password or try again after 3 hours</string>
+    <string name="find_pay_pwd">find payment password</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="change_phone_success">phone is changed</string>
+
+
+
+
+</resources>

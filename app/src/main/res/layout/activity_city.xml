@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_bar_layout"></include>
+    <TextView
+        android:id="@+id/tv_index"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#F5F5F5"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:textColor="#c4acac"
+        android:textSize="18sp" />
+<ListView
+    android:id="@+id/lv_city"
+    android:divider="@null"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+</ListView>
+</LinearLayout>

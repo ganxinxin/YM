@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar_photo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorBlack"
+    android:minHeight="?attr/actionBarSize"
+    app:navigationIcon="@mipmap/ic_back"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/PhotoTheme"
+    app:titleTextColor="@android:color/white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="拍摄身份证"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorTitle"
+        android:textSize="25sp"
+        />
+    <ImageButton
+        android:id="@+id/img_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@mipmap/camera2"
+        />
+
+</android.support.v7.widget.Toolbar>
